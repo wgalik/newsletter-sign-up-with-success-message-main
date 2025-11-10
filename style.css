@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap");
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100dvh;
+  background-color: hsl(235, 18%, 26%);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: hsl(234, 29%, 20%);
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+}
+@media (min-width: 40rem) {
+  body {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+main section {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+#signUp {
+  max-width: 58rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1rem;
+}
+@media (min-width: 40rem) {
+  #signUp {
+    flex-direction: row;
+    max-height: 40rem;
+    padding: 2rem;
+    border-radius: 2rem;
+  }
+}
+#signUp .image {
+  background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 100%;
+  aspect-ratio: 16/12;
+}
+@media (min-width: 40rem) {
+  #signUp .image {
+    order: 1;
+    background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+    background-position: right center;
+    flex: 1 1 50%;
+    height: 100%;
+    aspect-ratio: 1/2;
+    border-radius: 1rem;
+  }
+}
+#signUp article {
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 40rem) {
+  #signUp article {
+    flex: 1 1 50%;
+  }
+}
+#signUp article ul {
+  list-style: none;
+}
+#signUp article ul li {
+  position: relative;
+  padding-left: 2.2rem;
+  margin: 1rem 0;
+}
+#signUp article ul li::before {
+  content: "";
+  background: url("./assets/images/icon-list.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1.3rem;
+  aspect-ratio: 1/1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#signUp form label,
+#signUp form #noValidateMsg {
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-block;
+}
+#signUp form #noValidateMsg {
+  color: hsl(4, 100%, 67%);
+  float: right;
+  display: none;
+}
+#signUp form input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(0, 0%, 58%);
+  margin: 0.5rem 0 1rem;
+  cursor: pointer;
+}
+#signUp form input.error {
+  border: 1px solid hsl(4, 100%, 67%);
+  background-color: hsl(4, 100%, 90%);
+  color: hsl(4, 100%, 67%);
+}
+#signUp form input#email:focus {
+  border: 1px solid hsl(234, 29%, 20%);
+}
+#signUp form input#email:focus-visible {
+  outline: none;
+}
+#signUp form input#submitBtn {
+  background-color: hsl(234, 29%, 20%);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+#signUp form input#submitBtn:hover {
+  background-color: hsl(4, 100%, 67%);
+  box-shadow: 0 5px 25px hsl(4, 100%, 67%);
+}
+
+#successMsg {
+  display: none;
+  grid-template-rows: 1fr 3fr auto;
+  justify-content: flex-start;
+  padding: clamp(2rem, 8%, 3rem);
+  gap: 2rem;
+  width: min(30rem, 100%);
+}
+@media (min-width: 40rem) {
+  #successMsg {
+    height: auto;
+    grid-template-rows: auto 1fr auto;
+    border-radius: 2rem;
+  }
+}
+#successMsg .image {
+  background-image: url("./assets/images/icon-success.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  aspect-ratio: 1/1;
+  align-self: end;
+  width: 3rem;
+}
+#successMsg article {
+  display: grid;
+  align-self: start;
+  gap: 1rem;
+}
+#successMsg article #emailValue {
+  font-weight: 700;
+}
+#successMsg #dismissBtn {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: hsl(234, 29%, 20%);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  align-self: end;
+}
+#successMsg #dismissBtn:hover {
+  background-color: hsl(4, 100%, 67%);
+  box-shadow: 0 5px 25px hsl(4, 100%, 67%);
+}/*# sourceMappingURL=style.css.map */
