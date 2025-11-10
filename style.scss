@@ -81,7 +81,7 @@ main {
 
 h1,
 h2 {
-  font-size: 2.5rem;
+  font-size: #{clamp(2.5rem, calc(5vw + 1px), 3rem)};
   line-height: 1.2;
 }
 
@@ -95,6 +95,7 @@ article {
   gap: 1rem;
   @media (min-width: $sm) {
     flex-direction: row;
+    gap: 2rem;
     min-height: auto;
     max-height: 40rem;
     max-width: 58rem;
@@ -126,6 +127,7 @@ article {
     gap: 1rem;
     @media (min-width: $sm) {
       flex: 1 1 50%;
+      padding: 0;
     }
     ul {
       list-style: none;
