@@ -19,11 +19,7 @@ const openNoValidateMsg = () => {
 const subscribe = (event) => {
   event.preventDefault();
   const email = emailInput.value.trim();
-  if (!email) {
-    openNoValidateMsg();
-    return;
-  }
-  if (!regex.test(email)) {
+  if (!email || !regex.test(email)) {
     openNoValidateMsg();
     return;
   }
