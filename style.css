@@ -9,7 +9,7 @@
 
 body {
   width: 100vw;
-  height: 100dvh;
+  min-height: 100dvh;
   background-color: hsl(235, 18%, 26%);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -40,7 +40,7 @@ main {
 }
 main section {
   width: 100%;
-  height: 100%;
+  min-height: 100dvh;
   background-color: #fff;
 }
 
@@ -50,7 +50,6 @@ h1 {
 }
 
 #signUp {
-  max-width: 58rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -60,9 +59,12 @@ h1 {
 @media (min-width: 40rem) {
   #signUp {
     flex-direction: row;
+    min-height: auto;
     max-height: 40rem;
+    max-width: 58rem;
     padding: 2rem;
     border-radius: 2rem;
+    overflow: hidden;
   }
 }
 #signUp .image {
@@ -72,7 +74,13 @@ h1 {
   background-repeat: no-repeat;
   background-position: center bottom;
   width: 100%;
-  aspect-ratio: 16/12;
+  aspect-ratio: 16/9;
+}
+@media (min-width: 35rem) {
+  #signUp .image {
+    background-image: url("./assets/images/illustration-sign-up-tablet.svg");
+    aspect-ratio: 5/3;
+  }
 }
 @media (min-width: 40rem) {
   #signUp .image {
@@ -80,8 +88,8 @@ h1 {
     background-image: url("./assets/images/illustration-sign-up-desktop.svg");
     background-position: right center;
     flex: 1 1 50%;
-    height: 100%;
-    aspect-ratio: 1/2;
+    align-self: stretch;
+    aspect-ratio: auto;
     border-radius: 1rem;
   }
 }
@@ -164,9 +172,11 @@ h1 {
   padding: clamp(2rem, 8%, 3rem);
   gap: 2rem;
   width: min(30rem, 100%);
+  min-height: 100dvh;
 }
 @media (min-width: 40rem) {
   #successMsg {
+    min-height: auto;
     height: auto;
     grid-template-rows: auto 1fr auto;
     border-radius: 2rem;
