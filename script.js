@@ -19,7 +19,6 @@ const openNoValidateMsg = () => {
 const subscribe = (event) => {
   event.preventDefault();
   const email = emailInput.value.trim();
-  console.log(isError);
   if (!email) {
     openNoValidateMsg();
     return;
